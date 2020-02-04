@@ -1,35 +1,37 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400);
 
-.segment2 {
+$device-width: 90vw;
+
+.clock {
     /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
-    padding: 20px;
+    padding-top: 20px;
+    color: white;
 }
 
 .timer-group {
-    height: 400px;
+    height: $device-width;
     margin: 0 auto;
     position: relative;
-    width: 400px;
+    width: $device-width;
 }
 
 .timer {
     border-radius: 50%;
-    height: 100px;
+    height: $device-width / 4;
     overflow: hidden;
     position: absolute;
-    width: 100px;
+    width: $device-width / 4;
 }
 
 .timer:after {
-    background: #111 url(https://codepen.io/images/classy_fabric.png);
+    background: #111;
     border-radius: 50%;
     content: "";
     display: block;
-    height: 80px;
-    left: 10px;
+    height: $device-width / 5;
+    left: $device-width / 40;
     position: absolute;
-    width: 80px;
-    top: 10px;
+    width: $device-width / 5;
+    top: $device-width / 40;
 }
 
 .timer .hand {
@@ -41,7 +43,7 @@
 }
 
 .timer .hand span {
-    border: 50px solid rgba(0, 255, 255, .4);
+    border: ($device-width / 8) solid rgba(0, 255, 255, .4);
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-radius: 50%;
@@ -74,9 +76,9 @@
 
 .timer.hour {
     background: rgba(0, 0, 0, .3);
-    height: 400px;
+    height: $device-width;
     left: 0;
-    width: 400px;
+    width: $device-width;
     top: 0;
 }
 
@@ -84,85 +86,81 @@
     animation-duration: 3600s;
     border-top-color: rgba(255, 0, 255, .4);
     border-right-color: rgba(255, 0, 255, .4);
-    border-width: 200px;
+    border-width: $device-width /2;
 }
 
 .timer.hour:after {
-    height: 360px;
-    left: 20px;
-    width: 360px;
-    top: 20px;
+    height: $device-width / 1.111;
+    left: $device-width / 20;
+    width: $device-width / 1.111;
+    top: $device-width / 20;
 }
 
 .timer.minute {
     background: rgba(0, 0, 0, .2);
-    height: 350px;
-    left: 25px;
-    width: 350px;
-    top: 25px;
+    height: $device-width /1.143;
+    left: $device-width / 16;
+    width: $device-width / 1.143;
+    top: $device-width / 16;
 }
 
 .timer.minute .hand span {
     animation-duration: 60s;
     border-top-color: rgba(0, 255, 255, .4);
     border-right-color: rgba(0, 255, 255, .4);
-    border-width: 175px;
+    border-width: $device-width / 2.28;
 }
 
 .timer.minute:after {
-    height: 310px;
-    left: 20px;
-    width: 310px;
-    top: 20px;
+    height: $device-width / 1.29;
+    left: $device-width / 20;
+    width: $device-width / 1.29;
+    top: $device-width / 20;
 }
 
 .timer.second {
     background: rgba(0, 0, 0, .2);
-    height: 300px;
-    left: 50px;
-    width: 300px;
-    top: 50px;
+    height: $device-width / 1.333;
+    left: $device-width / 8;
+    width: $device-width / 1.333;
+    top: $device-width / 8;
 }
 
 .timer.second .hand span {
     animation-duration: 1s;
     border-top-color: rgba(255, 255, 255, .15);
     border-right-color: rgba(255, 255, 255, .15);
-    border-width: 150px;
+    border-width: $device-width / 2.666;
 }
 
 .timer.second:after {
-    height: 296px;
-    left: 2px;
-    width: 296px;
-    top: 2px;
+    height: $device-width / 1.334;
+    left:$device-width / 200;
+    width: $device-width / 1.334;
+    top: $device-width / 200;
 }
 
 .face {
     background: rgba(0, 0, 0, .1);
     border-radius: 50%;
-    height: 296px;
-    left: 52px;
-    padding: 165px 40px 0;
+    height: $device-width / 1.334;
+    left: $device-width / 8;
+    padding: $device-width/4.5 0;
     position: absolute;
-    width: 296px;
+    width: $device-width / 1.334;
     text-align: center;
-    top: 52px;
+    top: $device-width / 8;
 }
 
 .face h2 {
     font-weight: 300;
+  font-size: $device-width / 20;
 }
 
-.face p {
+.face span {
     border-radius: 20px;
-    font-size: 76px;
+    font-size: $device-width / 5.1;
     font-weight: 400;
-    position: absolute;
-    top: 17px;
-    width: 260px;
-    left: 20px;
-    margin-top: 65px;
 }
 
 @keyframes spin1 {
